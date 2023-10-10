@@ -7,74 +7,67 @@ To implement Opening and Closing using Python and OpenCV.
 2. OpenCV
 ## Algorithm:
 ### Step1:
-<br>
+Import the necessary packages
 
 
 ### Step2:
-<br>
+Read the image
 
 ### Step3:
-<br>
+Create the structuring element
 
 ### Step4:
-<br>
+Use Opening operation
 
 ### Step5:
-<br>
+Use Closing Operation
 
  
 ## Program:
+```
+Developed By: Jegathish S
+Register NO: 212221230041
+```
 
-``` Python
+``` 
 # Import the necessary packages
-
+import cv2
+import numpy as np
 
 
 # Create the Text using cv2.putText
-
+img= np.zeros((350,1400),dtype ='uint8')
+font = cv2.FONT_HERSHEY_SIMPLEX
+cv2.putText(img,'JEGATHISH S',(15,200),font,5,(255),10,cv2.LINE_AA)
+cv2.imshow('created_text',img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
 
 # Create the structuring element
-
-
+struct_ele= np.ones((9,9),np.uint8)
 
 # Use Opening operation
-
-
+opening = cv2.morphologyEx(img,cv2.MORPH_OPEN,struct_ele)
+cv2.imshow('Opening',opening)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
 
 # Use Closing Operation
-
-
-
-
-
+closing = cv2.morphologyEx(img,cv2.MORPH_CLOSE,struct_ele)
+cv2.imshow('Closing',closing)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 ```
 ## Output:
 
 ### Display the input Image
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+![output](org.png)
 
 ### Display the result of Opening
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
+![output](open.png)
 ### Display the result of Closing
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
+![output](close.png)
 ## Result
 Thus the Opening and Closing operation is used in the image using python and OpenCV.

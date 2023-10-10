@@ -22,6 +22,9 @@ Use Opening operation
 ### Step5:
 Use Closing Operation
 
+### Step6:
+Display all the output images
+
  
 ## Program:
 ```
